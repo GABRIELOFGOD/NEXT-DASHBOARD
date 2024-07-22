@@ -16,6 +16,9 @@ const config: Config = {
         'highlight': '#2e374a',
         'btnBlue': '#5d57c9'
       },
+      padding: {
+        "main": "50px"
+      },
     },
   },
   plugins: [],

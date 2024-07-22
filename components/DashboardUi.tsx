@@ -13,7 +13,7 @@ const DashboardUi = () => {
   // const [gotTransactionImg, setGotTransactionImg] = useState<Boolean>(true)
   
   return (
-    <div className='flex flex-col gap-5 p-5'>
+    <div className='flex flex-col gap-5 px-2 py-5'>
       <div className='flex gap-5 justify-between'>
         {CardDeal.map((card, i) => (
           <DashboardCard
@@ -39,13 +39,13 @@ const DashboardUi = () => {
             {DummyTransactions.map((transaction, i) => (
               <tr
                 key={i}
-                className='w-fit'
+                className='w-fit px-5 hover:bg-highlight rounded-sm duration-200 py-1 cursor-pointer'
               >
                 <td className='flex gap-2'>
                   {/* {transaction.img && <img width={25} height={25} className='rounded-full my-auto' src={transaction.img} alt='transaction img' />} */}
                   <p className="my-auto capitalize">{transaction.transaction}</p>
                 </td>
-                <td className={`text-xs p-1 rounded-sm h-fit ${transaction.status == 'pending' ? 'bg-yellow-500' : transaction.status == 'complete' ? 'bg-green-500' : transaction.status == 'failed' ? 'bg-red-700' : 'bg-red-500'} `}>{transaction.status}</td>
+                <td className={`text-xs w-fit rounded-sm ${transaction.status == 'pending' ? 'text-yellow-500' : transaction.status == 'complete' ? 'text-green-500' : transaction.status == 'failed' ? 'text-red-700' : 'text-red-500'} `}>{transaction.status}</td>
                 <td className='text-xs'>{transaction.date}</td>
                 <td>{transaction.amount}</td>
               </tr>

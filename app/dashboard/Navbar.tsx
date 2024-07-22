@@ -5,7 +5,7 @@ import React from 'react'
 import { MdNotifications, MdOutlineChat, MdPublic, MdSearch } from 'react-icons/md'
 
 const Navbar = () => {
-  const pathName = usePathname()
+  const pathName = usePathname();
   
   return (
     <div className='bg-lightBg rounded-md justify-between flex p-2'>
